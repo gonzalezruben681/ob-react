@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+// Models
 import { LEVELS } from "../../models/level.enum";
 import { Task } from "../../models/task.class";
+
 import TaskComponent from "../pure/task";
 import TaskForm from "../pure/forms/taskForm";
 // Importamos la hoja de estilos de task.scss
@@ -36,7 +38,9 @@ const TaskListComponent = () => {
   // Control del ciclo de vida del componente
   useEffect(() => {
     console.log("Task State has been modified");
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
     return () => {
       console.log("TaskList component is going to unmount..");
     };
@@ -69,6 +73,51 @@ const TaskListComponent = () => {
     setTasks(tempTasks);
   }
 
+  const Table = () => {
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {/* Iterar sobre una lista de tareas */}
+          {tasks.map((task, index) => {
+            return (
+              <TaskComponent
+                key={index}
+                task={task}
+                complete={completeTask}
+                remove={deleteTask}
+              ></TaskComponent>
+            );
+          })}
+        </tbody>
+      </table>
+    )
+  }
+
+  let taskTable;
+
+  if (tasks.length > 0) {
+    taskTable = <Table></Table>
+  } else {
+    taskTable = (
+      <div>
+        <h3>There are not tasks to show</h3>
+        <h4>Please, create one</h4>
+      </div>
+    )
+  }
+  const loadingStyle = {
+    color: 'grey',
+    fontSize: '30px',
+    fontWeight: 'bold'
+  }
   return (
     <div>
       <div className="col-12">
@@ -83,33 +132,12 @@ const TaskListComponent = () => {
             data-mdb-perfect-scrollbar="true"
             style={{ position: "relative", height: "400px" }}
           >
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Priority</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-              {/* Iterar sobre una lista de tareas */}
-                {tasks.map((task, index) => {
-                  return (
-                    <TaskComponent
-                      key={index}
-                      task={task}
-                      complete={completeTask}
-                      remove={deleteTask}
-                    ></TaskComponent>
-                  );
-                })}
-              </tbody>
-            </table>
+            {/* TODO: ADD LOADING SPINNER */}
+            {loading ? (<p style={loadingStyle}>Loading tasks...</p>) : taskTable}
           </div>
         </div>
       </div>
-      <TaskForm add={addTask}></TaskForm>
+      <TaskForm add={addTask} length={tasks.length}></TaskForm>
     </div>
   );
 };

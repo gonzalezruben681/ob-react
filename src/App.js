@@ -31,11 +31,13 @@ function App() {
       {/* </header> */}
       {/* Ejemplos de Renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
+
       {/* ----------------PROYECTO FINAL */}
-       {/* <TaskListComponent></TaskListComponent> */}
+       <TaskListComponent></TaskListComponent>
+       {/* ------------------------------ */}
        {/* Gestión de eventos */}
        {/* <Father></Father> */}
-       <Ejercicio12></Ejercicio12>
+       {/* <Ejercicio12></Ejercicio12> */}
     </div>
   );
 }
