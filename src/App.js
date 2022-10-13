@@ -9,6 +9,8 @@ import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import Ejercicio12 from './components/pure/ejecicios/ejercicio12';
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function App() {
   return (
@@ -31,13 +33,15 @@ function App() {
       {/* </header> */}
       {/* Ejemplos de Renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
-
-      {/* ----------------PROYECTO FINAL */}
-       <TaskListComponent></TaskListComponent>
-       {/* ------------------------------ */}
        {/* Gestión de eventos */}
        {/* <Father></Father> */}
        {/* <Ejercicio12></Ejercicio12> */}
+      {/* Ejemplos de uso de FORMIK y Yup  */}
+      {/* <LoginFormik></LoginFormik> */}
+      <RegisterFormik></RegisterFormik>
+      {/* ----------------PROYECTO FINAL */}
+       {/* <TaskListComponent></TaskListComponent> */}
+       {/* ------------------------------ */}
     </div>
   );
 }
