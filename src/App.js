@@ -11,37 +11,39 @@ import OptionalRender from './components/pure/optionalRender';
 import Ejercicio12 from './components/pure/ejecicios/ejercicio12';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import TaskFormik from './components/pure/ejecicios/ejercicio15';
 
 function App() {
   return (
     <div className="App">
       {/* <header className="App-header"> */}
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-       {/* Ejemplos de uso de hooks */}
-       {/* <Ejemplo></Ejemplo> */}
-       {/* <Ejemplo2></Ejemplo2> */}
-       {/* <MiComponenteConContexto></MiComponenteConContexto> */}
-       {/* Todo lo que hay aquí, es tratado como props.children */} 
-       {/* 
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      {/* Ejemplos de uso de hooks */}
+      {/* <Ejemplo></Ejemplo> */}
+      {/* <Ejemplo2></Ejemplo2> */}
+      {/* <MiComponenteConContexto></MiComponenteConContexto> */}
+      {/* Todo lo que hay aquí, es tratado como props.children */}
+      {/* 
        <Ejemplo4 nombre="Rubén">
         <h3>
           Contenido del props.children
         </h3>
        </Ejemplo4>
         */}
-        {/* <GreetingStyled name="Martín"></GreetingStyled> */}
+      {/* <GreetingStyled name="Martín"></GreetingStyled> */}
       {/* </header> */}
       {/* Ejemplos de Renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
-       {/* Gestión de eventos */}
-       {/* <Father></Father> */}
-       {/* <Ejercicio12></Ejercicio12> */}
+      {/* Gestión de eventos */}
+      {/* <Father></Father> */}
+      {/* <Ejercicio12></Ejercicio12> */}
       {/* Ejemplos de uso de FORMIK y Yup  */}
       {/* <LoginFormik></LoginFormik> */}
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
+      <TaskFormik></TaskFormik>
       {/* ----------------PROYECTO FINAL */}
-       {/* <TaskListComponent></TaskListComponent> */}
-       {/* ------------------------------ */}
+      {/* <TaskListComponent></TaskListComponent> */}
+      {/* ------------------------------ */}
     </div>
   );
 }
