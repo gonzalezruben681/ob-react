@@ -3,11 +3,12 @@ import {
   Route,
   Routes,
   Navigate,
-} from 'react-router-dom';
+} from "react-router-dom";
 // import './App.css';
-import NotFoundPage from './pages/404/NotFoundPage';
-import LoginPage from './pages/auth/LoginPage';
-import DashboardPage from './pages/dashboard/Dashboard';
+import NotFoundPage from "./pages/404/NotFoundPage";
+import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
+import DashboardPage from "./pages/dashboard/Dashboard";
 
 function AppRoutingFinal() {
   // TODO: change to value from sessionStorage (or something dinamic)
@@ -18,12 +19,30 @@ function AppRoutingFinal() {
     <Router>
       <Routes>
         {/* Redirections to protect our routes */}
-        <Route exact path='/' element={loggedIn ? (<Navigate from='/' to='/dashboard' />) : (<Navigate from='/' to='/login' />)} />
+        <Route
+          exact
+          path="/"
+          element={
+            loggedIn ? (
+              <Navigate from="/" to="/dashboard" />
+            ) : (
+              <Navigate from="/" to="/login" />
+            )
+          }
+        />
         {/* Login Route */}
-        <Route exact path='/login' element={<LoginPage />} />
+        <Route exact path="/registro" element={<RegisterPage />} />
+        {/* Register Route */}
+        <Route exact path="/login" element={<LoginPage />} />
         {/* Dashboard Route */}
-        <Route exact path='/dashboard' element={loggedIn ? (<DashboardPage />) : (<Navigate from='/' to='/login' />)} />
-        <Route path='*' element={<NotFoundPage />} />
+        <Route
+          exact
+          path="/dashboard"
+          element={
+            loggedIn ? <DashboardPage /> : <Navigate from="/" to="/login" />
+          }
+        />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
