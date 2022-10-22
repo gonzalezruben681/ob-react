@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 // añadimos Bootstrap a nuestro proyecto
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 // ! Importante: los estilos propios, deben ir debajo de los de bootstrap para que no los pise o sobreescriba.
-import './index.css';
+import "./index.css";
 
-import App from './App';
-import AppRoutingOne from './AppRoutingOne';
-import AppRoutingFinal from './AppRoutingFinal';
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import AppRoutingOne from "./AppRoutingOne";
+import AppRoutingFinal from "./AppRoutingFinal";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <AppRoutingFinal />
+    <App />
+    {/* <AppRoutingFinal /> */}
   </React.StrictMode>
 );
 

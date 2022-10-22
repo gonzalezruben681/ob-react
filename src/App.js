@@ -1,17 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import Ejemplo from './hooks/Ejemplo';
-import Ejemplo2 from './hooks/Ejemplo_2';
-import MiComponenteConContexto from './hooks/Ejemplo_3';
-import Ejemplo4 from './hooks/Ejemplo_4';
-import TaskListComponent from './components/container/task_list';
-import GreetingStyled from './components/pure/greetingStyled';
-import Father from './components/container/father';
-import OptionalRender from './components/pure/optionalRender';
-import Ejercicio12 from './components/pure/ejecicios/ejercicio12';
-import LoginFormik from './components/pure/forms/loginFormik';
-import RegisterFormik from './components/pure/forms/registerFormik';
-import TaskFormik from './components/pure/ejecicios/ejercicio15';
+import logo from "./logo.svg";
+import "./App.css";
+import Ejemplo from "./hooks/Ejemplo";
+import Ejemplo2 from "./hooks/Ejemplo_2";
+import MiComponenteConContexto from "./hooks/Ejemplo_3";
+import Ejemplo4 from "./hooks/Ejemplo_4";
+import TaskListComponent from "./components/container/task_list";
+import GreetingStyled from "./components/pure/greetingStyled";
+import Father from "./components/container/father";
+import OptionalRender from "./components/pure/optionalRender";
+import Ejercicio12 from "./components/pure/ejecicios/ejercicio12";
+import CardContainer from "./components/pure/ejecicios/jokesCard";
+import LoginFormik from "./components/pure/forms/loginFormik";
+import RegisterFormik from "./components/pure/forms/registerFormik";
+import TaskFormik from "./components/pure/ejecicios/ejercicio15";
+import AsyncExample from "./components/pure/AsyncExample";
+import ObservableExample from "./components/pure/ObservableExample";
+import FetchExample from "./components/pure/FetchExample";
+import AxiosExample from "./components/pure/axioExample";
 
 function App() {
   return (
@@ -40,7 +45,14 @@ function App() {
       {/* Ejemplos de uso de FORMIK y Yup  */}
       {/* <LoginFormik></LoginFormik> */}
       {/* <RegisterFormik></RegisterFormik> */}
-      <TaskFormik></TaskFormik>
+      {/* <TaskFormik></TaskFormik> */}
+      {/* Ejemplos de procesos asíncronos */}
+      {/* <AsyncExample></AsyncExample> */}
+      {/*Ejemplos de Observables rxjs   */}
+      {/* <ObservableExample></ObservableExample> */}
+      {/* <FetchExample></FetchExample> */}
+      {/* <AxiosExample></AxiosExample> */}
+      <CardContainer />
       {/* ----------------PROYECTO FINAL */}
       {/* <TaskListComponent></TaskListComponent> */}
       {/* ------------------------------ */}
